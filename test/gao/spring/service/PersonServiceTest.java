@@ -14,13 +14,13 @@ public class PersonServiceTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContextXML.xml");
 		this.personService = (PersonService) applicationContext.getBean("personService");
 	}
 
 	@Test
 	public void testSave() throws Exception {
-		for(int i=0;i<6;i++){
+		for(int i=6;i<12;i++){
 			personService.save(new Person("ÕÅÈý"+i));
 		}
 	}
@@ -40,7 +40,7 @@ public class PersonServiceTest {
 	
 	@Test
 	public void testDelete() throws Exception {
-		personService.delete(6);
+		personService.delete(8);
 	}
 	
 	@Test
