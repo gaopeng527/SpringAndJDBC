@@ -40,7 +40,7 @@ public class PersonServiceTest {
 	
 	@Test
 	public void testDelete() throws Exception {
-		personService.delete(1);
+		personService.delete(6);
 	}
 	
 	@Test
